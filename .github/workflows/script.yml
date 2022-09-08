@@ -1,4 +1,4 @@
-name: build
+name: builder
 
 on: push
 
@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@v3
-      - run: ./build-snap-amd64.sh
+
+      - name: build
+        run: ./build-snap-amd64.sh
