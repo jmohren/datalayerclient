@@ -32,7 +32,7 @@ parts:
         - libzmq5
       override-pull: |
         mkdir -p ../../../tmp/
-        cp ../../../deb/ctrlx-datalayer-1.*.*.deb ../../../tmp/ctrlx-datalayer.deb
+        wget https://github.com/boschrexroth/ctrlx-automation-sdk/releases/download/1.16.0/ctrlx-datalayer-1.8.6.deb -O ../../../tmp/ctrlx-datalayer.deb
         snapcraftctl pull
       override-prime: |
         rm -rf ../tmp
