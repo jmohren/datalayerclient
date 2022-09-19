@@ -17,7 +17,7 @@ jobs:
       #  run: ./build-snap-amd64.sh
 
       - name: Build Snap
-        uses: jmohren/ez-action@v0.0
+        uses: jmohren/ez-action@v0.1
 
       - name: Commit files
         run: |
