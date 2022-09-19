@@ -10,8 +10,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      #- name: Install Snapcraft
-      #  uses: samuelmeuli/action-snapcraft@v1
+      - name: Install Snapcraft
+        uses: samuelmeuli/action-snapcraft@v1
 
       #- name: build
       #  run: ./build-snap-amd64.sh
