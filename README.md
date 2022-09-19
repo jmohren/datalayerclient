@@ -1,6 +1,5 @@
 # README datalayer.client.light
 
-
 ## Introduction
 
 The sample demonstrates how to read values from ctrlX Data Layer. 
