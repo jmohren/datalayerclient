@@ -17,7 +17,7 @@ jobs:
       #  run: ./build-snap-amd64.sh
 
       - name: Build Snap
-        uses: jmohren/ctrlx-build-snap-action@v0.5
+        uses: jmohren/ctrlx-build-snap-action@v0.6
 
       - name: Commit files
         run: |
