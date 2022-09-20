@@ -14,7 +14,7 @@ jobs:
         uses: samuelmeuli/action-snapcraft@v1
 
       - name: Build Snap
-        uses: jmohren/ctrlx-build-snap-action@v0.9
+        uses: jmohren/ctrlx-build-snap-action@v0.10
 
       - name: Commit files
         run: |
