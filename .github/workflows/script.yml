@@ -15,6 +15,8 @@ jobs:
 
       - name: Build Snap
         uses: jmohren/ctrlx-build-snap-action@v0.10
+        with: 
+          architecture: amd64
 
       - name: Commit files
         run: |
