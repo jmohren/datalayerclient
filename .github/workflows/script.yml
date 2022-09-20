@@ -14,9 +14,9 @@ jobs:
         uses: samuelmeuli/action-snapcraft@v1
 
       - name: Build Snap
-        uses: jmohren/ctrlx-build-snap-action@v0.13
+        uses: jmohren/ctrlx-build-snap-action@v0.15
         with: 
-          architecture: arm64
+          architecture: amd64
 
       - name: Commit files
         run: |
