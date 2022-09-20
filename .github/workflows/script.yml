@@ -13,9 +13,6 @@ jobs:
       - name: Install Snapcraft
         uses: samuelmeuli/action-snapcraft@v1
 
-      #- name: build
-      #  run: ./build-snap-amd64.sh
-
       - name: Build Snap
         uses: jmohren/ctrlx-build-snap-action@v0.9
 
