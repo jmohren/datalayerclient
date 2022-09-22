@@ -14,16 +14,11 @@ jobs:
         uses: jmohren/ctrlx-build-snap-action@v0.49
         with: 
           architecture: amd64
-
-      - name: Commit files
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add '*.snap'
-          git commit -m "Add snap" -a
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      
+      - name: Build Snap arm64
+        uses: jmohren/ctrlx-build-snap-action@v0.49
+        with: 
+          architecture: arm64
 
       - name: Release
         uses: softprops/action-gh-release@v1
