@@ -29,3 +29,9 @@ jobs:
 
       - name: Push changes
         uses: ad-m/github-push-action@master
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        #if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: '*.snap'
