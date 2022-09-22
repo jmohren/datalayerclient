@@ -29,7 +29,7 @@ parts:
       source: ./tmp/ctrlx-datalayer.deb
       source-type: deb
       stage-packages:
-        - libzmq5
+        - libzmq5:arm64
       build-packages:
         - libzmq5
       override-pull: |
