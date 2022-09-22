@@ -10,8 +10,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Build Snap
-        uses: jmohren/ctrlx-build-snap-action@v0.46
+      - name: Build Snap amd64
+        uses: jmohren/ctrlx-build-snap-action@v0.48
+        with: 
+          architecture: amd64
+      
+      - name: Build Snap arm64
+        uses: jmohren/ctrlx-build-snap-action@v0.48
         with: 
           architecture: amd64
 
