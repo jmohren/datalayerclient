@@ -29,13 +29,10 @@ parts:
       source: ./tmp/ctrlx-datalayer.deb
       source-type: deb
       stage-packages:
-        - libzmq5:arm64
-      build-packages:
         - libzmq5
       override-pull: |
         mkdir -p ../../../tmp/
         curl -s https://api.github.com/repos/boschrexroth/ctrlx-automation-sdk/releases/latest | grep "browser_download_url.*deb" | cut -d : -f 2,3 | tr -d \" | wget -qi - -O ../../../tmp/ctrlx-datalayer.deb
-        sudo apt install libzmq5
         snapcraftctl pull
       override-prime: |
         rm -rf ../tmp
