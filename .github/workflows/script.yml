@@ -10,11 +10,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      #- name: Install Snapcraft
-      #  uses: samuelmeuli/action-snapcraft@v1
-
       - name: Build Snap
-        uses: jmohren/ctrlx-build-snap-action@v0.33
+        uses: jmohren/ctrlx-build-snap-action@v0.34
         with: 
           architecture: arm64
 
