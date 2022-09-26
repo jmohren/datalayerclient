@@ -10,8 +10,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Build Snap amd64
-        uses: jmohren/ctrlx-build-app-action@v0.0.1
+      - name: Build app
+        uses: jmohren/ctrlx-build-app-action@v0.0.3
         with: 
           app-name: datalayerclient
 
