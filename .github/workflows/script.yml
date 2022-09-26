@@ -15,8 +15,10 @@ jobs:
         with: 
           app-name: datalayerclient
 
-      - name: Release
-        uses: softprops/action-gh-release@v1
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
         with:
-          tag_name: v0.0.1
-          files: datalayerclient.app
+          author_name: jmohren
+          author_email: johannes.mohren@rwth-aachen.de
+          message: 'app file'
+          add: '*.app'
