@@ -19,4 +19,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v0.0.1
-          files: '*.app'
+          files: datalayerclient.app
