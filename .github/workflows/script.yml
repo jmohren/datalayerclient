@@ -6,12 +6,12 @@ jobs:
   main:
     runs-on: ubuntu-latest
 
-    steps: #
+    steps: 
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Build app
-        uses: jmohren/ctrlx-build-app-action@v0.0.12
+        uses: jmohren/ctrlx-build-app-action@v0.0.13
         with: 
           app-name: datalayerclient
 
