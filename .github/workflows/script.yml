@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build app
-        uses: jmohren/ctrlx-build-app-action@v0.0.9
+        uses: jmohren/ctrlx-build-app-action@v0.0.10
         with: 
           app-name: datalayerclient
 
