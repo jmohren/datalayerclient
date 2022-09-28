@@ -20,8 +20,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v0.0.1
-<<<<<<< HEAD
           files: '*.snap'
-=======
-          files: '*.snap'
->>>>>>> eee70a23130457ed6258388086c26c9caee51a40
