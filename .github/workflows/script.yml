@@ -9,11 +9,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Build app
+      - 
+        name: Build ctrlX snap amd64
+        id: amd64build
+        uses: jmohren/ctrlx-actions/build-snap@v0.0.1
+        with: 
+            architecture: amd64 #required (amd64/arm64)
+      - 
+        name: Build ctrlX snap arm64
+        id: arm64build
+        uses: jmohren/ctrlx-actions/build-snap@v0.0.1
+        with: 
+            architecture: arm64 #required (amd64/arm64)
+      - 
+        name: Build app
         uses: jmohren/ctrlx-actions/build-app2@v0.0.1
-
-      - name: Release
+      - 
+        name: Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v0.0.1
