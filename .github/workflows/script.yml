@@ -13,12 +13,12 @@ jobs:
         name: Build ctrlX snap amd64
         uses: jmohren/ctrlx-actions/build-snap@v0.0.32
         with: 
-            architecture: amd64 #required (amd64/arm64)
+            architecture: amd64
       - 
         name: Build ctrlX snap arm64
         uses: jmohren/ctrlx-actions/build-snap@v0.0.31
         with: 
-            architecture: arm64 #required (amd64/arm64)
+            architecture: arm64
       - 
         name: Build app
         uses: jmohren/ctrlx-actions/build-app2@v0.0.31
