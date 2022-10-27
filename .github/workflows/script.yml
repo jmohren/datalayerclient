@@ -12,7 +12,7 @@ jobs:
       - 
         name: Build ctrlX snap amd64
         id: amd64-build
-        uses: jmohren/ctrlx-actions/build-snap@v0.0.51
+        uses: jmohren/ctrlx-actions/build-snap@v0.0.52
         with: 
             architecture: amd64
       - 
