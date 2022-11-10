@@ -35,6 +35,9 @@ from comm.datalayer import SubscriptionProperties
 
 from helper.ctrlx_datalayer_helper import get_client
 
+import requests
+import json
+
 def main():
 
     print()
@@ -59,16 +62,32 @@ def main():
             ###delete:1###
 
             while datalayer_client.is_connected():
+                
+                features = ["feature_1","feature_2","feature_3"]
+                input_data=[]
+                addr_root = "sdk-py-provider-alldata/input/"
+                for node in features:
+                    result, read_var = datalayer_client.read_sync(addr_root+node)
+                    input_data.append(read_var.get_float64())
 
-                dt_str = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
+                url = 'http://18.196.151.186/predict'
+                diff_features=["fea_1","fea_2","fea_3"]
+                payload = dict(zip(diff_features, input_data))
 
-                addr = "framework/metrics/system/memused-percent"
-                result, read_var = datalayer_client.read_sync(addr)
-                #datalayer_client.ping_sync
-                val = read_var.get_float64()
-                print("INFO read_sync: %s, %s: %f" % (dt_str, addr, val))
-               
-                time.sleep(1.0)
+                print(payload)
+
+                x = requests.post(url, json = payload)
+                pred_json=json.loads(x.text)
+                print(pred_json)
+
+                pred_value=pred_json['pred']
+                
+                addr_root = "sdk-py-provider-alldata/prediction/"
+                data = Variant()
+                data.set_int8(pred_value)
+                datalayer_client.write_sync(address=(addr_root+"anomaly"), data=data)
+
+                time.sleep(2.0)
 
             print("ERROR Data Layer is NOT connected")
             print("INFO Closing subscription")
